@@ -3,11 +3,11 @@ function randomNumberBetween(min, max) {
 }
 
 let tries = 0;
-let result = 0;
+let result;
 
-while (result <= 2) {
+do {
   result = randomNumberBetween(1, 6);
   tries += 1;
-}
+} while (result <= 2)
 
 console.log(`It took ${tries} tr${tries > 1 ? 'ies' : 'y'} to get a number greater than 2`);
