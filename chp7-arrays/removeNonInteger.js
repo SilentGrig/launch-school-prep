@@ -1,5 +1,5 @@
 function removeNonInteger(array) {
-  return array.filter(value => Number.isInteger(value));
+  return array.filter(Number.isInteger);
 }
 
 let array = [1, 'a', '1', 3, NaN, 3.1415, -4, null, false];
