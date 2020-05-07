@@ -5,4 +5,12 @@ let myProtoObj = {
 
 const myObj = Object.create(myProtoObj);
 
-console.log(Object.getPrototypeOf(myObj));
+myObj.qux = 3;
+
+Object.keys(myObj).forEach(function (key) {
+  console.log(key);
+});
+
+for (let key in myObj) {
+  console.log(key);
+}
