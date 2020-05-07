@@ -1,8 +1,8 @@
-function factorial(number) {
-  if (number <= 1) {
-    return 1;
+function factorial(number, acc = 1) {
+  if (number === 0) {
+    return acc;
   }
-  return number * factorial(number-1);
+  return factorial(number - 1, acc * number)
 }
 
 console.log(factorial(0));
